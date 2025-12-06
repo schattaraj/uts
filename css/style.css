@@ -198,16 +198,16 @@ header.header_with_back .left .text p {
   padding: 0 10px;
 }
 
-.screen3 .text {
+.screen3 .ticket-history .text {
   text-align: center;
   padding: 0 20px;
 }
 
-.screen3 .text p {
+.screen3 .ticket-history .text p {
   font-size: 14px;
 }
 
-.screen3 .text button {
+.screen3 .ticket-history .text button {
   background-color: #F17768;
   border-radius: 30px;
   border: none;
