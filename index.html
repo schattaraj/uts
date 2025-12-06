@@ -51,10 +51,10 @@
             <button>
                 <img src="images/options/image_13.png" alt="">
             </button>
-            <button>
+            <button onclick="screenUpdate('screen2')">
                 <img src="images/options/image_10.png" alt="">
             </button>
-            <button>
+            <button onclick="screenUpdate('screen3')">
                 <img src="images/options/image_11.png" alt="">
             </button>
         </div>
@@ -78,9 +78,9 @@
     </div>
 </div>
 <div class="screen2 d-none">
-    <header class="homepage">
+    <header class="header_with_back">
         <div class="left">
-            <button>
+            <button onclick="screenUpdate('screen1')">
             <i class="fa-solid fa-arrow-left"></i>
         </button>
         <div class="text">
@@ -93,7 +93,55 @@
     </header>
     <div class="booking-history">
         <img src="images/booking_history.png" alt="">
+        <div class="list">
+            <img src="images/journy-ticket.png" alt="">
+            <img src="images/journy1.png" alt="">
+        </div>
     </div>
 </div>
+<div class="screen3 d-none">
+    <header class="header_with_back">
+        <div class="left">
+            <button onclick="screenUpdate('screen1')">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <div class="text">
+            <p>Show Ticket</p>
+        </div>
+    </div>
+    <div class="right">
+        <i class="fa-solid fa-arrows-rotate"></i> 
+    </div>    
+    </header>
+    <div class="ticket-history">
+        <img src="images/show_ticket.png" alt="">
+        <div class="text">
+        <p>No Transaction Found. If you have booked the paperless ticket and have not found it here. Please sync from the server again by selecting source station sync option given below.</p>
+        <button>Source Station Sync</button>
+    </div>
+    </div>
+</div>
+<script>
+function screenUpdate(cls){
+    switch (cls) {
+        case "screen1":
+        document.querySelector('.screen1').classList.remove('d-none');
+        document.querySelector('.screen2').classList.add('d-none');
+            break;
+        case "screen2":
+        document.querySelector('.screen1').classList.add('d-none');
+        document.querySelector('.screen2').classList.remove('d-none');
+            break;
+        case "screen3":
+        document.querySelector('.screen1').classList.add('d-none');
+        document.querySelector('.screen2').classList.add('d-none');
+        document.querySelector('.screen3').classList.remove('d-none');
+            break;
+        default:
+            break;
+    }
+    
+}
+</script>
 </body>
 </html>

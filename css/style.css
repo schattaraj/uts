@@ -153,29 +153,67 @@ header p {
   padding: 0 10px;
 }
 
-.screen2 header {
+header.header_with_back {
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#FD7665), to(#F6854F));
   background: linear-gradient(90deg, #FD7665, #F6854F);
 }
 
-.screen2 header .left button {
+header.header_with_back .left button {
   background-color: transparent;
   padding: 0;
   border: none;
   margin-right: 8px;
 }
 
-.screen2 header .left button i {
+header.header_with_back .left button i {
   color: #fff;
   font-size: 17px;
 }
 
-.screen2 header .left .text p {
+header.header_with_back .left .text p {
   font-size: 18px;
 }
 
 .screen2 .booking-history {
   margin-top: 12px;
+}
+
+.screen2 .booking-history .list {
+  padding: 0 10px;
+  padding-top: 12px;
+}
+
+.screen2 .booking-history .list img {
+  width: 100%;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.screen3 .ticket-history {
+  margin-top: 12px;
+}
+
+.screen3 .ticket-history img {
+  padding: 0 10px;
+}
+
+.screen3 .text {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.screen3 .text p {
+  font-size: 14px;
+}
+
+.screen3 .text button {
+  background-color: #F17768;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

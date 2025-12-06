@@ -104,30 +104,61 @@ header{
     bottom: 0;
     padding: 0 10px;
 }
-
-.screen2{
-    header{
-        color: #fff;
-        background: linear-gradient(90deg, #FD7665, #F6854F);
-        .left{
-            button{
-                background-color: transparent;
-                padding: 0;
-                border:none;
-                margin-right: 8px;
-                i{
-                    color: #fff;
-                    font-size: 17px;
-                }
+header.header_with_back{
+    color: #fff;
+    background: linear-gradient(90deg, #FD7665, #F6854F);
+    .left{
+        button{
+            background-color: transparent;
+            padding: 0;
+            border:none;
+            margin-right: 8px;
+            i{
+                color: #fff;
+                font-size: 17px;
             }
-            .text{
-                p{
-                    font-size: 18px;
-                }
+        }
+        .text{
+            p{
+                font-size: 18px;
             }
         }
     }
+}
+.screen2{
     .booking-history{
         margin-top: 12px;
+        .list{
+            padding: 0 10px;
+            padding-top: 12px;
+            img{
+                width: 100%;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+.screen3{
+    .ticket-history{
+        margin-top: 12px;
+       img{
+        padding: 0 10px;
+       }
+    }
+    .text{
+        text-align: center;
+        padding: 0 20px;
+        p{
+            font-size: 14px;
+        }
+        button{
+            background-color: #F17768;
+            border-radius: 30px;
+            border: none;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 8px 20px;
+            font-size: 14px;
+        }
     }
 }
