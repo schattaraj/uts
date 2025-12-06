@@ -1,7 +1,16 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     font-family: "Roboto", sans-serif;
     background-color: #fff;
+}
+img{
+    max-width: 100%;
+}
+.d-none{
+    display: none;
 }
 header{
     background: linear-gradient(90deg, #F17768, #F6854F);
@@ -46,8 +55,8 @@ header{
 .tab-section{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding-top: 10px;
+    // align-items: flex-end;
+    // padding-top: 10px;
     .tab{
         .icon{
             width: 32px;
@@ -57,10 +66,68 @@ header{
             margin: 0 auto;
             margin-bottom: 6px;
         }
+        img{
+            width: 100%;
+        }
+    &.active{
+        border-bottom: 2px solid #F6854F;
+        padding-bottom: 4px;
+    }    
     }
     span{
         text-align: center;
         display: block;
         font-size: 14px;
+    }
+}
+.normal_booking{
+    padding: 10px 10px;
+}
+.options{ 
+    padding: 4px;
+    background-color: #F1F1F1;
+    .flex{
+    display: flex;
+    button{
+        border: none;
+        padding: 0 2px;
+        background-color: transparent;
+        img{
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    padding: 0 10px;
+}
+
+.screen2{
+    header{
+        color: #fff;
+        background: linear-gradient(90deg, #FD7665, #F6854F);
+        .left{
+            button{
+                background-color: transparent;
+                padding: 0;
+                border:none;
+                margin-right: 8px;
+                i{
+                    color: #fff;
+                    font-size: 17px;
+                }
+            }
+            .text{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .booking-history{
+        margin-top: 12px;
     }
 }
