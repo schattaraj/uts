@@ -94,8 +94,8 @@
     <div class="booking-history">
         <img src="images/booking_history.png" alt="">
         <div class="list">
-            <img src="images/journy-ticket.png" alt="">
             <img src="images/journy1.png" alt="">
+            <img src="images/journy-ticket.png" alt="">
         </div>
     </div>
 </div>
@@ -127,10 +127,12 @@ function screenUpdate(cls){
         case "screen1":
         document.querySelector('.screen1').classList.remove('d-none');
         document.querySelector('.screen2').classList.add('d-none');
+        document.querySelector('.screen3').classList.add('d-none');
             break;
         case "screen2":
         document.querySelector('.screen1').classList.add('d-none');
         document.querySelector('.screen2').classList.remove('d-none');
+        document.querySelector('.screen3').classList.add('d-none');
             break;
         case "screen3":
         document.querySelector('.screen1').classList.add('d-none');
