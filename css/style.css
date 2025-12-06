@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, right top, from(#F17768), to(#F6854F));
+  background: linear-gradient(90deg, #F17768, #F6854F);
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 16px;
+}
+
+header .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .right .bell {
+  background-color: #F17768;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 16px;
+}
+
+header .right .bell svg {
+  width: 18px;
+  height: 18px;
+}
+
+header img {
+  height: 38px;
+  margin-right: 8px;
+}
+
+header p {
+  margin: 0;
+}
+
+.tab-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 10px;
+}
+
+.tab-section .tab .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #F17768;
+  margin: 0 auto;
+  margin-bottom: 6px;
+}
+
+.tab-section span {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */
