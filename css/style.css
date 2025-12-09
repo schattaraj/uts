@@ -157,7 +157,8 @@ header p {
   text-transform: uppercase;
   color: #d62e07;
   padding-top: 3px;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
 }
 
 .footer {
@@ -246,7 +247,8 @@ header.header_with_back .left .text p {
 }
 
 .screen2 .booking-history .list .card table thead tr th {
-  font-size: 15px;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
   background-color: #95f1fe;
   width: 50%;
   padding: 6px 6px;
