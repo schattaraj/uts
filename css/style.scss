@@ -1,5 +1,7 @@
+$skyBlue:#95f1fe;
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 body{
     margin: 0;
@@ -30,21 +32,28 @@ header{
         justify-content: flex-end;
         align-items: center;
         .bell{
-            background-color: #F17768;
-            border-radius: 50%;
-            width: 34px;
-            height: 34px;
+            // background-color: #F17768;
+            // border-radius: 50%;
+            // width: 34px;
+            // height: 34px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: 16px;
-            svg{
-                width: 18px;
-                height: 18px;
+            // svg{
+            //     width: 18px;
+            //     height: 18px;
+            // }
+            img{
+                height: 38px;
             }
         }
+        .menu{
+            color: #000;
+            font-size: 18px;
+        }
     }
-    img{
+    img.logo{
         height: 38px;
         margin-right: 8px;
     }
@@ -58,20 +67,15 @@ header{
     // align-items: flex-end;
     // padding-top: 10px;
     .tab{
-        .icon{
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background-color: #F17768;
-            margin: 0 auto;
-            margin-bottom: 6px;
-        }
+        text-align: center;
+        padding-top: 6px;
+        padding-bottom: 4px;
+        font-size: 14px;
         img{
-            width: 100%;
+            width: 32px;
         }
     &.active{
         border-bottom: 2px solid #F6854F;
-        padding-bottom: 4px;
     }    
     }
     span{
@@ -84,17 +88,29 @@ header{
     padding: 10px 10px;
 }
 .options{ 
-    padding: 4px;
+    padding: 3px;
     background-color: #F1F1F1;
     .flex{
     display: flex;
     button{
         border: none;
-        padding: 0 2px;
-        background-color: transparent;
+        background-color: #fff;
+        text-align: center;
+        width: 33.33%;
+        padding: 6px 0;
+        border: 2px solid #F1F1F1;
         img{
-            height: 100%;
+            width: 20px;
             object-fit: contain;
+            &.bightness-0{
+                filter: brightness(0);
+            }
+        }
+        p{
+            text-transform: uppercase;
+            color: #d62e07;
+            padding-top: 3px;
+            font-size: 14px;
         }
     }
 }
@@ -125,30 +141,175 @@ header.header_with_back{
         }
     }
 }
+.heading{
+    background-image: url('../images/icons/titles_bg_uts.png');
+    padding: 6px 10px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    .icon{
+        width: 32px;
+        padding: 0;
+        margin-right: 12px;
+    }
+    span{
+        text-transform: uppercase;
+        color: #fff;
+    }
+}
 .screen2{
     .booking-history{
         margin-top: 12px;
         .list{
             padding: 0 10px;
             padding-top: 12px;
-            img{
+            img.image{
                 width: 100%;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             }
+            .card{
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: 0px 3px 9px 5px rgba(0,0,0,0.1);
+                margin-bottom: 16px;
+                position: relative;
+            table{
+                width: 100%;
+                border-spacing: 0;
+                position: relative;
+                thead{
+                    tr{
+                        th{
+                            font-size: 15px;
+                            img{
+                                width: 14px;
+                            }
+                            &:first-child{
+                                text-align: left;
+                                border-right: 1px solid #f1f1f1;
+                            }
+                            &:last-child{
+                                text-align: right;
+                            }
+                            background-color: $skyBlue;
+                            width: 50%;
+                            padding: 6px 6px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            border-bottom: 1px solid #f1f1f1;
+                            padding: 6px 0;
+                            font-size: 14px;
+                            border-right: 1px solid #f1f1f1;
+                            &:last-child{
+                            border-right: none;
+                            }
+                            .location{
+                                display: flex;
+                                align-items: center;
+                            }
+                            span{
+                                font-size: 16px;
+                            }
+                            img{
+                                width: 20px;
+                                margin-right: 4px;
+                            }
+                            table{
+                                tbody{
+                                    tr{
+                                        td{
+                                            font-size: 12px;
+                                            text-align: center;
+                                            padding: 6px 0;
+                                            &:first-child{
+                                                text-align: left;
+                                                padding: 6px 0;
+                                                text-transform: capitalize;
+                                            }
+                                span{
+                                    color: #F17768;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                    &.via{
+                                        font-size: 14px;
+                                        font-weight: 600;
+                                        margin-left: 3px;
+                                    }
+                                }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:first-child{
+                            td{
+                                text-transform: uppercase;
+                                padding: 10px 8px;
+                            }
+                        }
+                            td.b-b-0{
+                                border-bottom: none;
+                                padding: 0;
+                            }
+                    }
+                }
+            }
+            img.stamp{
+                width: 80px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .action{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 6px;
+                padding-bottom: 2px;
+                button{
+                    color: #F17768;
+                    text-transform: uppercase;
+                    padding: 0;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 11px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 20px;
+                        margin-right: 2px;
+                    }
+                    i{
+                        margin-right: 8px;
+                        color: #000;
+                    }
+                }
+            }
+        }
         }
     }
 }
 .screen3{
     .ticket-history{
         margin-top: 12px;
-       img{
-        padding: 0 10px;
-       }
        .text{
         text-align: center;
         padding: 0 20px;
+        padding-top: 16px;
         p{
             font-size: 14px;
+            margin-bottom: 24px;
         }
         button{
             background-color: #F17768;

@@ -1,6 +1,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -57,10 +58,6 @@ header .right {
 }
 
 header .right .bell {
-  background-color: #F17768;
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,12 +70,16 @@ header .right .bell {
   margin-right: 16px;
 }
 
-header .right .bell svg {
-  width: 18px;
-  height: 18px;
+header .right .bell img {
+  height: 38px;
 }
 
-header img {
+header .right .menu {
+  color: #000;
+  font-size: 18px;
+}
+
+header img.logo {
   height: 38px;
   margin-right: 8px;
 }
@@ -96,22 +97,19 @@ header p {
           justify-content: space-between;
 }
 
-.tab-section .tab .icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: #F17768;
-  margin: 0 auto;
-  margin-bottom: 6px;
+.tab-section .tab {
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  font-size: 14px;
 }
 
 .tab-section .tab img {
-  width: 100%;
+  width: 32px;
 }
 
 .tab-section .tab.active {
   border-bottom: 2px solid #F6854F;
-  padding-bottom: 4px;
 }
 
 .tab-section span {
@@ -125,7 +123,7 @@ header p {
 }
 
 .options {
-  padding: 4px;
+  padding: 3px;
   background-color: #F1F1F1;
 }
 
@@ -137,14 +135,29 @@ header p {
 
 .options .flex button {
   border: none;
-  padding: 0 2px;
-  background-color: transparent;
+  background-color: #fff;
+  text-align: center;
+  width: 33.33%;
+  padding: 6px 0;
+  border: 2px solid #F1F1F1;
 }
 
 .options .flex button img {
-  height: 100%;
+  width: 20px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.options .flex button img.bightness-0 {
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+}
+
+.options .flex button p {
+  text-transform: uppercase;
+  color: #d62e07;
+  padding-top: 3px;
+  font-size: 14px;
 }
 
 .footer {
@@ -175,6 +188,33 @@ header.header_with_back .left .text p {
   font-size: 18px;
 }
 
+.heading {
+  background-image: url("../images/icons/titles_bg_uts.png");
+  padding: 6px 10px;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading .icon {
+  width: 32px;
+  padding: 0;
+  margin-right: 12px;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: #fff;
+}
+
 .screen2 .booking-history {
   margin-top: 12px;
 }
@@ -184,27 +224,173 @@ header.header_with_back .left .text p {
   padding-top: 12px;
 }
 
-.screen2 .booking-history .list img {
+.screen2 .booking-history .list img.image {
   width: 100%;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.screen2 .booking-history .list .card {
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 9px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 9px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.screen2 .booking-history .list .card table {
+  width: 100%;
+  border-spacing: 0;
+  position: relative;
+}
+
+.screen2 .booking-history .list .card table thead tr th {
+  font-size: 15px;
+  background-color: #95f1fe;
+  width: 50%;
+  padding: 6px 6px;
+  text-transform: uppercase;
+}
+
+.screen2 .booking-history .list .card table thead tr th img {
+  width: 14px;
+}
+
+.screen2 .booking-history .list .card table thead tr th:first-child {
+  text-align: left;
+  border-right: 1px solid #f1f1f1;
+}
+
+.screen2 .booking-history .list .card table thead tr th:last-child {
+  text-align: right;
+}
+
+.screen2 .booking-history .list .card table tbody tr td {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 6px 0;
+  font-size: 14px;
+  border-right: 1px solid #f1f1f1;
+}
+
+.screen2 .booking-history .list .card table tbody tr td:last-child {
+  border-right: none;
+}
+
+.screen2 .booking-history .list .card table tbody tr td .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen2 .booking-history .list .card table tbody tr td span {
+  font-size: 16px;
+}
+
+.screen2 .booking-history .list .card table tbody tr td img {
+  width: 20px;
+  margin-right: 4px;
+}
+
+.screen2 .booking-history .list .card table tbody tr td table tbody tr td {
+  font-size: 12px;
+  text-align: center;
+  padding: 6px 0;
+}
+
+.screen2 .booking-history .list .card table tbody tr td table tbody tr td:first-child {
+  text-align: left;
+  padding: 6px 0;
+  text-transform: capitalize;
+}
+
+.screen2 .booking-history .list .card table tbody tr td table tbody tr td span {
+  color: #F17768;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.screen2 .booking-history .list .card table tbody tr td table tbody tr td span.via {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+.screen2 .booking-history .list .card table tbody tr:first-child td {
+  text-transform: uppercase;
+  padding: 10px 8px;
+}
+
+.screen2 .booking-history .list .card table tbody tr td.b-b-0 {
+  border-bottom: none;
+  padding: 0;
+}
+
+.screen2 .booking-history .list .card img.stamp {
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.screen2 .booking-history .list .card .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 6px;
+  padding-bottom: 2px;
+}
+
+.screen2 .booking-history .list .card .action button {
+  color: #F17768;
+  text-transform: uppercase;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.screen2 .booking-history .list .card .action button img {
+  width: 20px;
+  margin-right: 2px;
+}
+
+.screen2 .booking-history .list .card .action button i {
+  margin-right: 8px;
+  color: #000;
 }
 
 .screen3 .ticket-history {
   margin-top: 12px;
 }
 
-.screen3 .ticket-history img {
-  padding: 0 10px;
-}
-
 .screen3 .ticket-history .text {
   text-align: center;
   padding: 0 20px;
+  padding-top: 16px;
 }
 
 .screen3 .ticket-history .text p {
   font-size: 14px;
+  margin-bottom: 24px;
 }
 
 .screen3 .ticket-history .text button {

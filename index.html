@@ -1,149 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="screen1">
-    <header class="homepage">
-        <div class="left">
-        <img src="images/indian_railway.png" alt="">
-        <div class="text">
-            <strong>UTS</strong>
-            <p>IR Unreserved Ticketing</p>
+        <header class="homepage">
+            <div class="left">
+                <img class="logo" src="images/icons/ir_uts.png" alt="">
+                <div class="text">
+                    <strong>UTS</strong>
+                    <p>IR Unreserved Ticketing</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="bell">
+                    <img src="images/icons/notification_bell_uts.png" alt="">
+                </div>
+                <div class="menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+        </header>
+        <div class="tab-section">
+            <div class="tab active">
+                <img src="images/icons/book_ticket_uts.png" alt="">
+                <p>Journey Ticket</p>
+            </div>
+            <div class="tab">
+                <img src="images/icons/qr_booking1_uts.png" alt="">
+                <p>QR Booking</p>
+            </div>
+            <div class="tab">
+                <img src="images/icons/quick_booking_uts.png" alt="">
+                <p>Quick Booking</p>
+            </div>
+            <div class="tab">
+                <img src="images/icons/platform_ticket_uts.png" alt="">
+                <p>Platform Ticket</p>
+            </div>
+            <div class="tab">
+                <img src="images/icons/season_ticket_uts.png" alt="">
+                <p>Session Ticket</p>
+            </div>
+        </div>
+        <div class="options">
+            <div class="flex">
+                <button>
+                    <img src="images/icons/cancel_ticket_uts.png" alt="">
+                    <p>Cancel Ticket</p>
+                </button>
+                <button onclick="screenUpdate('screen2')">
+                    <img src="images/icons/booking_history_uts.png" alt="">
+                    <p>booking history</p>
+                </button>
+                <button onclick="screenUpdate('screen3')">
+                    <img src="images/icons/show_booked_ticket_uts.png" alt="">
+                    <p>show ticket</p>
+                </button>
+            </div>
+            <div class="flex">
+                <button>
+                    <img src="images/icons/r_wallet_uts.png" alt="">
+                    <p>R-Wallet</p>
+                </button>
+                <button>
+                    <img src="images/icons/profile_avatar_uts.png" alt="">
+                    <p>Profile</p>
+                </button>
+                <button>
+                    <img class="bightness-0" src="images/icons/payment_option_uts.png" alt="">
+                    <p>Transaction</p>
+                </button>
+            </div>
+        </div>
+        <div class="normal_booking">
+            <img src="images/normal_booking.png" alt="">
+        </div>
+        <div class="footer">
+            <img src="images/copy_right.png" alt="">
         </div>
     </div>
-    <div class="right">
-        <div class="bell">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>                      
-        </div>
-        <div class="menu">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-        </div>        
-    </div>    
-    </header>
-    <div class="tab-section">
-        <div class="tab active">
-            <img src="images/image_2.png" alt="">
-        </div>
-        <div class="tab">
-            <img src="images/image_3.png" alt="">
-        </div>
-        <div class="tab">
-            <img src="images/image_4.png" alt="">
-        </div>
-        <div class="tab">
-            <img src="images/image_5.png" alt="">
-        </div>
-        <div class="tab">
-            <img src="images/image_6.png" alt="">
+    <div class="screen2 d-none">
+        <header class="header_with_back">
+            <div class="left">
+                <button onclick="screenUpdate('screen1')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="text">
+                    <p>Booking History</p>
+                </div>
+            </div>
+            <div class="right">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+        </header>
+        <div class="booking-history">
+            <!-- <img src="images/booking_history.png" alt=""> -->
+            <div class="heading"><img class="icon" src="images/icons/ticket_white_uts.png" alt=""><span>booking history</span></div>
+            <div class="list">
+                <div class="card">
+                    <img class="stamp" src="images/icons/paperless_stamp_uts.png" alt="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Journey (M-Ticket)</th>
+                                <th>Fare: <img src="images/icons/rs_uts.png" class="rupees" alt="">45.00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="location"><img src="images/icons/source_uts.png"
+                                            alt=""><span>Bidhannagar Road</span></div>
+                                </td>
+                                <td>
+                                    <div class="location"><img src="images/icons/destination_uts.png"
+                                            alt=""><span>bankura</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="b-b-0">
+                                    <table>
+                                        <tr>
+                                            <td colspan="3">Via: <span>ddj-dkae-msae-mfck-psf</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ADULT: <span>1</span> CHILD: <span>0</span></td>
+                                            <td class="text-center">SECOND (II)</td>
+                                            <td class="text-center">ORDINARY (0)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">BOOKING DATE: <span>DEC 13, 2025 05:04:08</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    <div class="action">
+                        <button class="book-again"><i class="fa-solid fa-arrow-right-long"></i>book again</button>
+                        <button class="next-train"><img src="images/icons/search_uts.png" alt="">next trains</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="stamp" src="images/icons/paperless_stamp_uts.png" alt="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Journey (M-Ticket)</th>
+                                <th>Fare: <img src="images/icons/rs_uts.png" class="rupees" alt="">70.00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="location"><img src="images/icons/source_uts.png"
+                                            alt=""><span>kolkata</span></div>
+                                </td>
+                                <td>
+                                    <div class="location"><img src="images/icons/destination_uts.png"
+                                            alt=""><span>durgapur</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="b-b-0">
+                                    <table>
+                                        <tr>
+                                            <td colspan="3">Via: <span class="via">ddj-akae-kqu-bwn</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ADULT: <span>1</span> CHILD: <span>0</span></td>
+                                            <td class="text-center">SECOND (II)</td>
+                                            <td class="text-center">MAIL/EXP (M/E)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">BOOKING DATE: <span>NOV 30, 2025 11:16:08</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    <div class="action">
+                        <button class="book-again"><i class="fa-solid fa-arrow-right-long"></i>book again</button>
+                        <button class="next-train"><img src="images/icons/search_uts.png" alt="">next trains</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="stamp" src="images/icons/paperless_stamp_uts.png" alt="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Journey (M-Ticket)</th>
+                                <th>Fare: <img src="images/icons/rs_uts.png" class="rupees" alt="">170.00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="location"><img src="images/icons/source_uts.png"
+                                            alt=""><span>hatidah jn.</span></div>
+                                </td>
+                                <td>
+                                    <div class="location"><img src="images/icons/destination_uts.png"
+                                            alt=""><span>howrah</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="b-b-0">
+                                    <table>
+                                        <tr>
+                                            <td colspan="3">Via: <span class="via">kiul-jsme-asn-bwn-bdc</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ADULT: <span>1</span> CHILD: <span>0</span></td>
+                                            <td class="text-center">SECOND (II)</td>
+                                            <td class="text-center">SUPERFAST (S)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">BOOKING DATE: <span>DEC 06, 2025 21:14:59</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    <div class="action">
+                        <button class="book-again"><i class="fa-solid fa-arrow-right-long"></i>book again</button>
+                        <button class="next-train"><img src="images/icons/search_uts.png" alt="">next trains</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="stamp" src="images/icons/paperless_stamp_uts.png" alt="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Journey (M-Ticket)</th>
+                                <th>Fare: <img src="images/icons/rs_uts.png" class="rupees" alt="">5.00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="location"><img src="images/icons/source_uts.png"
+                                            alt=""><span>Bidhannagar road</span></div>
+                                </td>
+                                <td>
+                                    <div class="location"><img src="images/icons/destination_uts.png"
+                                            alt=""><span>dumdum jn.</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="b-b-0">
+                                    <table>
+                                        <tr>
+                                            <td colspan="3">Via: <span>-</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ADULT: <span>1</span> CHILD: <span>0</span></td>
+                                            <td class="text-center">SECOND (II)</td>
+                                            <td class="text-center">ORDINARY (0)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">BOOKING DATE: <span>DEC 04, 2025 17:56:39</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    <div class="action">
+                        <button class="book-again"><i class="fa-solid fa-arrow-right-long"></i>book again</button>
+                        <button class="next-train"><img src="images/icons/search_uts.png" alt="">next trains</button>
+                    </div>
+                </div>
+                <!-- <img class="image" src="images/journy1.png" alt="">
+                <img class="image" src="images/journy-ticket.png" alt=""> -->
+            </div>
         </div>
     </div>
-    <div class="options">
-        <div class="flex">
-            <button>
-                <img src="images/options/image_13.png" alt="">
-            </button>
-            <button onclick="screenUpdate('screen2')">
-                <img src="images/options/image_10.png" alt="">
-            </button>
-            <button onclick="screenUpdate('screen3')">
-                <img src="images/options/image_11.png" alt="">
-            </button>
-        </div>
-        <div class="flex">
-            <button>
-                <img src="images/options/image_12.png" alt="">
-            </button>
-            <button>
-                <img src="images/options/image_14.png" alt="">
-            </button>
-            <button>
-                <img src="images/options/image_15.png" alt="">
-            </button>
+    <div class="screen3 d-none">
+        <header class="header_with_back">
+            <div class="left">
+                <button onclick="screenUpdate('screen1')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="text">
+                    <p>Show Ticket</p>
+                </div>
+            </div>
+        </header>
+        <div class="ticket-history">
+            <!-- <img src="images/show_ticket.png" alt=""> -->
+            <div class="heading"><img class="icon" src="images/icons/ticket_white_uts.png" alt=""><span>show ticket</span></div>
+            <div class="text">
+                <p>No Transaction Found. If you have booked the paperless ticket and have not found it here. Please sync
+                    from the server again by selecting source station sync option given below.</p>
+                <button>Source Station Sync</button>
+            </div>
         </div>
     </div>
-    <div class="normal_booking">
-        <img src="images/normal_booking.png" alt="">
-    </div>
-    <div class="footer">
-        <img src="images/copy_right.png" alt="">
-    </div>
-</div>
-<div class="screen2 d-none">
-    <header class="header_with_back">
-        <div class="left">
-            <button onclick="screenUpdate('screen1')">
-            <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div class="text">
-            <p>Booking History</p>
-        </div>
-    </div>
-    <div class="right">
-        <i class="fa-solid fa-arrows-rotate"></i> 
-    </div>    
-    </header>
-    <div class="booking-history">
-        <img src="images/booking_history.png" alt="">
-        <div class="list">
-            <img src="images/journy1.png" alt="">
-            <img src="images/journy-ticket.png" alt="">
-        </div>
-    </div>
-</div>
-<div class="screen3 d-none">
-    <header class="header_with_back">
-        <div class="left">
-            <button onclick="screenUpdate('screen1')">
-            <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <div class="text">
-            <p>Show Ticket</p>
-        </div>
-    </div>
-    <div class="right">
-        <i class="fa-solid fa-arrows-rotate"></i> 
-    </div>    
-    </header>
-    <div class="ticket-history">
-        <img src="images/show_ticket.png" alt="">
-        <div class="text">
-        <p>No Transaction Found. If you have booked the paperless ticket and have not found it here. Please sync from the server again by selecting source station sync option given below.</p>
-        <button>Source Station Sync</button>
-    </div>
-    </div>
-</div>
-<script>
-function screenUpdate(cls){
-    switch (cls) {
-        case "screen1":
-        document.querySelector('.screen1').classList.remove('d-none');
-        document.querySelector('.screen2').classList.add('d-none');
-        document.querySelector('.screen3').classList.add('d-none');
-            break;
-        case "screen2":
-        document.querySelector('.screen1').classList.add('d-none');
-        document.querySelector('.screen2').classList.remove('d-none');
-        document.querySelector('.screen3').classList.add('d-none');
-            break;
-        case "screen3":
-        document.querySelector('.screen1').classList.add('d-none');
-        document.querySelector('.screen2').classList.add('d-none');
-        document.querySelector('.screen3').classList.remove('d-none');
-            break;
-        default:
-            break;
-    }
-    
-}
-</script>
+    <script>
+        function screenUpdate(cls) {
+            switch (cls) {
+                case "screen1":
+                    document.querySelector('.screen1').classList.remove('d-none');
+                    document.querySelector('.screen2').classList.add('d-none');
+                    document.querySelector('.screen3').classList.add('d-none');
+                    break;
+                case "screen2":
+                    document.querySelector('.screen1').classList.add('d-none');
+                    document.querySelector('.screen2').classList.remove('d-none');
+                    document.querySelector('.screen3').classList.add('d-none');
+                    break;
+                case "screen3":
+                    document.querySelector('.screen1').classList.add('d-none');
+                    document.querySelector('.screen2').classList.add('d-none');
+                    document.querySelector('.screen3').classList.remove('d-none');
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        screenUpdate('screen3');
+    </script>
 </body>
+
 </html>
