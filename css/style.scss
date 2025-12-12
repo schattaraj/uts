@@ -168,6 +168,8 @@ header.header_with_back{
         .list{
             padding: 0 10px;
             padding-top: 12px;
+            overflow-y: scroll;
+            height: 100vh;
             img.image{
                 width: 100%;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);

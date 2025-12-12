@@ -223,6 +223,8 @@ header.header_with_back .left .text p {
 .screen2 .booking-history .list {
   padding: 0 10px;
   padding-top: 12px;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .screen2 .booking-history .list img.image {
