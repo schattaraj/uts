@@ -456,6 +456,7 @@ header.header_with_back .left .text p {
   padding: 12px 16px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+  padding-bottom: 6px;
 }
 
 .show-ticket .ticket-container .ticket .title {
@@ -577,6 +578,74 @@ header.header_with_back .left .text p {
   padding-left: 4px;
 }
 
+.show-ticket .ticket-container .ticket .via {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #000;
+  padding: 2px 0;
+}
+
+.show-ticket .ticket-container .ticket .via .symbol {
+  padding: 2px 6px;
+  background-color: #8a269e;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 6px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.show-ticket .ticket-container .ticket .codes {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  padding: 2px 0;
+}
+
+.show-ticket .ticket-container .ticket .codes span {
+  font-weight: 600;
+}
+
+.show-ticket .ticket-container .ticket .note {
+  padding-top: 6px;
+  padding-bottom: 8px;
+  padding-left: 4px;
+  font-size: 14px;
+}
+
+.show-ticket .ticket-container .ticket .distance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 30px;
+  margin-bottom: 8px;
+}
+
+.show-ticket .ticket-container .ticket .distance span {
+  font-size: 12px;
+}
+
+.show-ticket .ticket-container .ticket .distance span.code {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.show-ticket .ticket-container .ticket .booking-time {
+  font-size: 14px;
+}
+
+.show-ticket .ticket-container .ticket .booking-time span {
+  font-weight: 600;
+}
+
 .show-ticket .ticket-container .others {
   padding: 10px;
   font-size: 11px;
@@ -588,5 +657,43 @@ header.header_with_back .left .text p {
 
 .show-ticket .ticket-container .others p {
   color: #084174;
+}
+
+.show-ticket .ticket-container .others .alert {
+  color: red;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 8px auto;
+}
+
+.show-ticket .ticket-container .others button.btn {
+  border: none;
+  background-color: #F17768;
+  border-radius: 30px;
+  color: #fff;
+  display: block;
+  padding: 8px 8px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  margin-bottom: 12px;
+}
+
+.show-ticket .ticket-container .others button.btn:last-child {
+  margin-bottom: 6px;
+}
+
+.show-ticket .footer {
+  position: fixed;
+  bottom: 4px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
