@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="screen1">
+    <div class="screen screen1">
         <header class="homepage">
             <div class="left">
                 <img class="logo" src="images/icons/ir_uts.png" alt="">
@@ -93,7 +93,7 @@
             <img src="images/copy_right.png" alt="">
         </div>
     </div>
-    <div class="screen2 d-none">
+    <div class="screen screen2 d-none">
         <header class="header_with_back">
             <div class="left">
                 <button onclick="screenUpdate('screen1')">
@@ -376,7 +376,7 @@
             </div>
         </div>
     </div>
-    <div class="screen3 d-none">
+    <div class="screen screen3 d-none">
         <header class="header_with_back">
             <div class="left">
                 <button onclick="screenUpdate('screen1')">
@@ -390,30 +390,77 @@
         <div class="ticket-history">
             <!-- <img src="images/show_ticket.png" alt=""> -->
             <div class="heading"><img class="icon" src="images/icons/ticket_white_uts.png" alt=""><span>show ticket</span></div>
-            <div class="text">
+            <!-- <div class="text">
                 <p>No Transaction Found. If you have booked the paperless ticket and have not found it here. Please sync
                     from the server again by selecting source station sync option given below.</p>
                 <button>Source Station Sync</button>
+            </div> -->
+            <div class="list">
+                <a href="show-ticket.html">
+                <div class="card">
+                    <img class="stamp" src="images/icons/paperless_stamp_uts.png" alt="">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Journey (M-Ticket)</th>
+                                <th>Fare: <img src="images/icons/rs_uts.png" class="rupees" alt="">90.00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="location"><img src="images/icons/source_uts.png"
+                                            alt=""><span>durgapur</span></div>
+                                </td>
+                                <td>
+                                    <div class="location"><img src="images/icons/destination_uts.png"
+                                            alt=""><span>howrah</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="b-b-0">
+                                    <table>
+                                        <tr>
+                                            <td colspan="3">Via: <span class="via">bdc-nh</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ADULT: <span>1</span> CHILD: <span>0</span></td>
+                                            <td class="text-center">SECOND (II)</td>
+                                            <td class="text-center">SUPERFAST (S)</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">BOOKING DATE: <span>DEC 12, 2025 05:50:08</span></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                    </table>
+                    <div class="action">
+                        <button class="book-again"><i class="fa-solid fa-arrow-right-long"></i>book again</button>
+                        <button class="next-train"><img src="images/icons/search_uts.png" alt="">next trains</button>
+                    </div>
+                </div>
+                </a>
             </div>
         </div>
     </div>
     <script>
         function screenUpdate(cls) {
+            document.querySelectorAll('.screen').forEach((item)=>{
+                item.classList.add('d-none');
+            });
             switch (cls) {
                 case "screen1":
                     document.querySelector('.screen1').classList.remove('d-none');
-                    document.querySelector('.screen2').classList.add('d-none');
-                    document.querySelector('.screen3').classList.add('d-none');
                     break;
                 case "screen2":
-                    document.querySelector('.screen1').classList.add('d-none');
                     document.querySelector('.screen2').classList.remove('d-none');
-                    document.querySelector('.screen3').classList.add('d-none');
                     break;
                 case "screen3":
-                    document.querySelector('.screen1').classList.add('d-none');
-                    document.querySelector('.screen2').classList.add('d-none');
                     document.querySelector('.screen3').classList.remove('d-none');
+                    break;
+                case "show-ticket":
+                    document.querySelector('.show-ticket').classList.remove('d-none');
                     break;
                 default:
                     break;
